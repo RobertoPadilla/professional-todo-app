@@ -1,0 +1,15 @@
+FROM python:3.10-slim-bullseye
+
+WORKDIR /home/app
+RUN apt-get update
+
+COPY ./requirements.txt /home/app/
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Run as non root user
+RUN useradd --create-home app
+USER app
+
+COPY ./app /home/app/
+
+CMD uvicorn api:app --host 0.0.0.0 --reload
