@@ -25,6 +25,6 @@ Práctica para crear un pipeline de CI/CD para desarrollo de una sencilla aplica
 
 ~~~mermaid
 erDiagram
-    users ||--|{ groups : has 
-    groups ||--|{ tasks : has
+    users ||--o{ groups : has 
+    groups ||--o{ tasks : has
 ~~~
