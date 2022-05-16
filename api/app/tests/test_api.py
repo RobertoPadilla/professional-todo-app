@@ -5,6 +5,9 @@ from api import app
 
 client = TestClient(app)
 
+# TODO Crear Modelos y Migraciones para una base de datos test
+# TODO Obtener identificadores de la base de datos para hacer tests dinamicos
+
 def test_read_main():
     response = client.get("/")
     assert response.status_code == 200
@@ -12,7 +15,6 @@ def test_read_main():
 
 # First use case
 def test_create_new_user():
-    # TODO Obtener el último id de la tabla de usuarios
     id = 1
     response = client.post(
         "/users",
