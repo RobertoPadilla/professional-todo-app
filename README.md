@@ -13,6 +13,7 @@ Práctica para crear un pipeline de CI/CD para desarrollo de una sencilla aplica
 
 **Casos de uso:**
 
+- Se puede registrar un nuevo usuario
 - El usuario puede cambiar su nombre
 - El usuario puede elegir y cambiar su avatar
 - El usuario puede crear un nuevo grupo de tareas
