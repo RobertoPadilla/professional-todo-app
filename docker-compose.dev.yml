@@ -6,7 +6,7 @@ services:
       context: ./api
       dockerfile: dockerfile.dev
     volumes:
-      - ./api/app:/home/app
+      - ./api:/home
     ports:
       - 8000:8000
   db:
